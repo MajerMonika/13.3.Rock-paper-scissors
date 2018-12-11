@@ -1,55 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>8.4 Papier, kamień, nożyce</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock–paper–scissors</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-
-  <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Rock–paper–scissors</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
-    </head>
-    <body>
-      <header>
-        <h1>rock - paper - scissors</h1>
-      </header>  
-      <div class="container">
-          <button id="start-game">Start new game</button>
-          <div id="round"></div>
-          <div id="game">
-            <h1>Choose rock, paper or scissors</h1>
-              <button class="btn rock" id="rock">ROCK</button>
-              <button class="btn paper" id="paper">PAPER</button>
-              <button class="btn scissors" id="scissors">SCISSORS</button>
-          </div>
-          <div id="info">
-            <div id="output"></div>
-            <div id="comment"></div>
-            <div id="result"></div>
-          </div>
-        </div>
-    </body>
-</html>
-  
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+  <header>
+    <h1>rock - paper - scissors</h1>
+  </header>
+  <div id="outputNewGame"></div>
+  <div>
+    <div class="newGame">
+      <button id="newGame">Start new game</button>
+    </div>
+    <h1>Choose rock, paper or scissors</h1>
+    <button id="paper" data-move="paper" class="btn paper player-move">PAPER</button>
+    <button id="rock" data-move="rock" class="btn rock player-move">ROCK</button>
+    <button id="scissors" data-move="scissors" class="btn scissors player-move">SCISSORS</button>
+  </div>
+  <div id="output">
+  </div>
+  <div id="result">
+  </div>
+  <div class="overlay" id="modal-overlay">
+    <div class="modal" id="displayResults">
+      <a href="#" class="close">x</a>
+      <header>Wynik gry</header>
+      <div class="content">
+        <p></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Who wins?</th>
+              <th>Your move</th>
+              <th>Computer move</th>
+            </tr>
+          </thead>
+          <tbody class="content-results">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
